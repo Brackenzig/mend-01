@@ -241,7 +241,7 @@ function renderReplace(file: string[], pos: number, O: string[], items: BodyItem
     else if (it.k === '-') { oIdx += 1; }
     else if (it.k === '+') {
       let l = it.text;
-      if (tier === 2 && l.startsWith(P)) l = F + l.slice(P.length);
+      if (tier === 2 && l.trim() !== '' && l.startsWith(P)) l = F + l.slice(P.length);
       out.push(l);
     }
   }
